@@ -2,3 +2,23 @@
  
 // Brute force
 
+// [2, 7, 3, -1, 4]  tv = 2
+
+const findIndicesSum = (array, targetValue) => {
+    for (let i = 0; i < array.length - 1; i++) {
+        for (let j = i+1; j < array.length; j++) {
+            if(targetValue === array[i]+array[j]) {
+                return [i, j]
+            }
+        }
+    }
+    return [];
+}
+
+array = [1, 2, 3, 4, 5];
+targetValue = 4;
+
+console.log(findIndicesSum(array, targetValue))
+
+// Time complexity - O(n2)
+// Space complexity - O(1)
