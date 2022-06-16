@@ -4,21 +4,42 @@
 
 // [2, 7, 3, -1, 4]  tv = 2
 
-const findIndicesSum = (array, targetValue) => {
-    for (let i = 0; i < array.length - 1; i++) {
-        for (let j = i+1; j < array.length; j++) {
-            if(targetValue === array[i]+array[j]) {
-                return [i, j]
-            }
+// const findIndicesSum = (array, targetValue) => {
+//     for (let i = 0; i < array.length - 1; i++) {
+//         for (let j = i+1; j < array.length; j++) {
+//             if(targetValue === array[i]+array[j]) {
+//                 return [i, j]
+//             }
+//         }
+//     }
+//     return [];
+// }
+
+// array = [1, 2, 3, 4, 5];
+// targetValue = 4;
+
+// console.log(findIndicesSum(array, targetValue))
+
+// Time complexity - O(n2)
+// Space complexity - O(1)
+
+function findIndicesSumGiven(array, targetValue) {
+    const hashTable = {};
+    let neededValue;
+    for (let i = 0; i < array.length; i++) {
+        neededValue = targetValue - array[i];
+        if(neededValue in hashTable) {
+            return [i, hashTable[neededValue]];
+        } else {
+            hashTable[array[i]] = i;
         }
     }
     return [];
 }
 
 array = [1, 2, 3, 4, 5];
-targetValue = 4;
+targetValue= 9
+console.log(findIndicesSumGiven(array, targetValue))
 
-console.log(findIndicesSum(array, targetValue))
-
-// Time complexity - O(n2)
-// Space complexity - O(1)
+// Time complexity - O(n)
+// Space complexity - O(n)
