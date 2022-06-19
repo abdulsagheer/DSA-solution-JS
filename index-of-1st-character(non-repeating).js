@@ -3,27 +3,53 @@
 
 // Brute force method
 
+// function nonRepeat(str) {
+//     let repeat;
+//     for (let i = 0; i < str.length; i++) {
+//         repeat = false;
+//         for (let j = 0; j < str.length; j++) {
+//             if(str[i] == str[j] && i!==j) {
+//                 repeat = true;
+//             }            
+//         }
+//         if(repeat === false) {
+//             return i;
+//         }
+//     }
+//     return null;
+// }
+
+// //'abcdbad'
+
+// str = "abacdefghefegghi";
+
+// console.log(nonRepeat(str))
+
+// Time complexity - O(n2)
+// Space complexity - O(1)
+
+// Method - 2 (Hash table)
+
 function nonRepeat(str) {
-    let repeat;
+    const ht = {};
     for (let i = 0; i < str.length; i++) {
-        repeat = false;
-        for (let j = 0; j < str.length; j++) {
-            if(str[i] == str[j] && i!==j) {
-                repeat = true;
-            }            
+        if(str[i] in ht) {
+            ht[str[i]]++;
+        } else {
+            ht[str[i]]=1;
         }
-        if(repeat === false) {
+    }
+    for (let i = 0; i < str.length; i++) {
+        if(ht[str[i]] === 1) {
             return i;
-        }
+        }        
     }
     return null;
 }
 
-//'abcdbad'
-
-str = "abacdefghefegghi";
+str = "aacdefghefegghi";
 
 console.log(nonRepeat(str))
 
-// Time complexity - O(n2)
+// Time complexity - O(n)
 // Space complexity - O(1)
