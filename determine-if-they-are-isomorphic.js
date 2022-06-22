@@ -4,7 +4,7 @@
 
 // Eg. s = "abacus", t = "rirfgs"
 
-// naive mehod T = O(n2)
+// naive method T = O(n2)
 
 const checkIsomorphic = function (s, t) {
   if (s.length !== t.length) return false;
