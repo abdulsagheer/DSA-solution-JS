@@ -53,3 +53,5 @@ function sortedSquaredArray(array) {
 a = [-8, 5, 2, -7, 5]
 
 console.log(sortedSquaredArray(a));
+
+// [1, 2, 3, 4, 5, 6]
