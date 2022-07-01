@@ -26,6 +26,6 @@ const isSorted = (arr) => {
 return true;
 }
 
-console.log(isSorted([1, 0, 2, 3, 4, 5]));
+console.log(isSorted([1, 2, 3, 4, 5]));
 
 // Time complexity - O(n)
