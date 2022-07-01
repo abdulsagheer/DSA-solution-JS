@@ -12,6 +12,8 @@
 
 // console.log(secLar([5, 20,12, 20]))
 
+// Time complexity - O(n2)
+
 const secLar = arr => {
     let res = 1,  lar = 0;
     for (let i = 1; i < arr.length; i++) {
@@ -28,4 +30,4 @@ const secLar = arr => {
 
 console.log(secLar([5, 20,12, 20]))
 
-// Time complexity - O(n2)
+// Time complexity - O(n)
