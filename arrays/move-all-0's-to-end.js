@@ -17,6 +17,11 @@ console.log(moveZero([10, 8, 0, 0, 2, 0]));
 // Time complexity - O(n2)
 
 // Efficient implementation
+function swap (x, y) {
+   temp = x;
+   x = y;
+   y = temp;
+}
 
 const moveZeros = arr => {
     let count = 0;
