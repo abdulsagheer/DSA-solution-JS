@@ -10,6 +10,7 @@ const moveZero = arr => {
             }
         }
     }
+    return arr;
 }
 
 console.log(moveZero([10, 8, 0, 0, 2, 0]));
@@ -31,9 +32,26 @@ const moveZeros = arr => {
             count++;
         }
     }
+    return arr;
 }
 console.log(moveZeros([10, 8, 0, 0, 2, 0]));
 
+const moveAllZero = (arr = []) => {
+    const res = [];
+    let currIndex = 0;
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        if (element === 0) {
+            res.push(0);
+        } else {
+            res.splice(currIndex, undefined, element);
+            currIndex++;
+        }
+    }
+    return res;
+};
+const arr = [5, 0, 1, 0, -3, 0, 4, 6];
+console.log(moveAllZero(arr));
 
 // Time complexity - O(1)
 
