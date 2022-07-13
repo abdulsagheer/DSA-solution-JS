@@ -1,6 +1,6 @@
 const remDub = arr => {
     let res = 1;
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) {
         if(arr[i] != arr[res-1]) {
             if(arr[res] = arr[i]);
             res++;
