@@ -12,7 +12,7 @@ const maxSum = arr => {
     return res; 
 }
 
-console.log(maxSum([1, -2, 3, -1, 2]));
+console.log(maxSum([-3, 8, -2, 4, -5, 6]));
 
 // Time complexity - O(n2)
 
@@ -26,6 +26,6 @@ const maxSums = (arr, sum) => {
     return res;
 }
 
-console.log(maxSums([1, -2, 3, -1, 2]));
+console.log(maxSums([-3, 8, -2, 4, -5, 6]));
 
 // Time complexity - O(n)
