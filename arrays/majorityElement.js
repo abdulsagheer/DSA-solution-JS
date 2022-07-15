@@ -38,3 +38,5 @@ const findMajority = arr => {
 }
 
 console.log(findMajority([8, 7, 6, 8, 6, 6, 6 ,6 ,6 ]));
+
+// Time complexity - O(n)
