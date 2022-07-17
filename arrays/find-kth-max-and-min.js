@@ -52,4 +52,6 @@ var findKthLargest = function (nums, k) {
   return heapQueue.front().element;
 };
 
+console.log(findKthLargest([0,1, 44, 54, 52, 4], 2))
+
 // Time complexity - O(1)
