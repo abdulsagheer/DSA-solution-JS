@@ -12,3 +12,5 @@ var maxSubArray = function (nums) {
 
 
 console.log(maxSubArray([1, 5, 6, 1, 4,]))
+
+// Time complexity - O(n)
