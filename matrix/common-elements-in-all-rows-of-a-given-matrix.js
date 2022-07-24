@@ -33,3 +33,6 @@ let mat = [
   [8, 1, 2, 7, 9],
 ];
 printCommonElements(mat);
+
+// Time complexity: O(m * n)
+// Auxiliary Space: O(N)
