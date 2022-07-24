@@ -42,3 +42,6 @@ var arr = [
 ];
 rotate(arr);
 printMatrix(arr);
+
+// Time Complexity – O(n*n)
+// Auxiliary Space – O(1)
